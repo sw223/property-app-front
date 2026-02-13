@@ -7,6 +7,7 @@ export interface SearchParams {
   price_min?: number;
   price_max?: number;
   page?: number;
+  per_page?: number;
 }
 
 export interface SearchFormData {
@@ -59,4 +60,14 @@ export interface PaginationState {
   totalPages: number;
   total: number;
   perPage: number;
+}
+
+export interface ValidationErrorResponse {
+  message: string;
+  errors: Record<string, string[]>;
+}
+
+export interface ApiErrorResponse {
+  message: string;
+  errors?: Record<string, string[]>;
 }
